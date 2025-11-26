@@ -37,8 +37,6 @@ class $modify(CreatorLayer) {
 			auto node = as<CCMenuItemSpriteExtra*>(m_creatorButtonsMenu->getChildren()->objectAtIndex(i));
 			auto sprite = node->getNormalImage();
 			auto nodeID = node->getID();
-			
-			sprite->setScale(0.85);
 
 			if (nodeID == "create-button")
 				node->setZOrder(1);
@@ -55,7 +53,7 @@ class $modify(CreatorLayer) {
 		}
 
 		AxisLayout* menuLayout = as<AxisLayout*>(m_creatorButtonsMenu->getLayout());
-		menuLayout->setGap(8);
+		menuLayout->setGap(60);
 		menuLayout->ignoreInvisibleChildren(true);
 		menuLayout->setAutoScale(false);
 		menuLayout->setCrossAxisReverse(false);
