@@ -1,21 +1,21 @@
 {
-	"geode": "4.5.0",
+	"geode": "4.9.0",
 	"version": "v1.1.2",
-	"id": "capeling.goodbye_unnecessary_buttons",
-	"name": "Goodbye Unnecessary Buttons",
+	"id": "cmds.19_buttons",
+	"name": "1.9 Buttons",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"developer": "Capeling",
+	"developer": "CMDs",
 	"description": "Removes The Versus and Map buttons!",
 	"dependencies": {
 		"geode.node-ids": ">=v1.10.0"
 	},
 	"links": {
 		"homepage": "https://twitter.com/capelingg",
-		"source": "https://github.com/Capeling/Goodbye-Unnecessary-Buttons"
+		"source": "https://github.com/oki333ed/1.9-buttons"
 	}
 }
