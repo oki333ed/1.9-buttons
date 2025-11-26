@@ -15,8 +15,15 @@ class $modify(CreatorLayer) {
 		if(!CreatorLayer::init())
 			return false;
 		CCMenu* m_creatorButtonsMenu = as<CCMenu*>(this->getChildByID("creator-buttons-menu"));
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("quests-button"))->setVisible(false);
 		as<CCNode*>(m_creatorButtonsMenu->getChildByID("versus-button"))->setVisible(false);
 		as<CCNode*>(m_creatorButtonsMenu->getChildByID("map-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("daily-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("weekly-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("event-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("gauntlets-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("lists-button"))->setVisible(false);
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("paths-button"))->setVisible(false);
 
 		auto gddpBtn = as<CCMenuItemSpriteExtra*>(m_creatorButtonsMenu->getChildByID("demon-progression-button"));
 
@@ -33,34 +40,18 @@ class $modify(CreatorLayer) {
 			
 			sprite->setScale(0.85);
 
-			if (nodeID == "map-button")
-				node->setZOrder(0);
-			else if (nodeID == "create-button")
+			if (nodeID == "create-button")
 				node->setZOrder(1);
 			else if (nodeID == "saved-button")
 				node->setZOrder(2);
 			else if (nodeID == "scores-button")
 				node->setZOrder(3);
-			else if (nodeID == "quests-button")
-				node->setZOrder(4);
-			else if (nodeID == "paths-button")
-				node->setZOrder(5);
-			else if (nodeID == "daily-button")
-				node->setZOrder(6);
-			else if (nodeID == "weekly-button")
-				node->setZOrder(7);
-			else if (nodeID == "event-button")
-				node->setZOrder(8);
-			else if (nodeID == "gauntlets-button")
-				node->setZOrder(9);
 			else if (nodeID == "map-packs-button")
-				node->setZOrder(11 + gddpThere);
+				node->setZOrder(4 + gddpThere);
 			else if (nodeID == "featured-button")
-				node->setZOrder(12 - gddpThere);
-			else if (nodeID == "lists-button")
-				node->setZOrder(13 + gddpThere);
+				node->setZOrder(5 - gddpThere);
 			else if (nodeID == "search-button")
-				node->setZOrder(14 + gddpThere);
+				node->setZOrder(6 + gddpThere);
 		}
 
 		AxisLayout* menuLayout = as<AxisLayout*>(m_creatorButtonsMenu->getLayout());
