@@ -38,6 +38,8 @@ class $modify(CreatorLayer) {
 			auto sprite = node->getNormalImage();
 			auto nodeID = node->getID();
 
+			sprite->setScale(1);
+
 			if (nodeID == "create-button")
 				node->setZOrder(1);
 			else if (nodeID == "saved-button")
